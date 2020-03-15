@@ -4,6 +4,9 @@ class PostsController < ApplicationController
     @posts = Post.all
     @post = Post.new
   end
+  def index_rank
+    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+  end
 
   def show
     @post = Post.find(params[:id])
@@ -19,6 +22,8 @@ class PostsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
+
+  
 
   private
   def post_params

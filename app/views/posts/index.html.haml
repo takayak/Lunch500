@@ -3,8 +3,9 @@
   - if user_signed_in?
     .logo Lunch500
     = link_to "ログアウト", destroy_user_session_path, :method => :delete ,class: 'btn btn-primary'
-    = link_to "マイページへ", user_path(current_user.id)
-    = link_to "ユーザー一覧へ", users_path
+    = link_to "マイページへ", user_path(current_user.id) ,class: 'btn btn-primary'
+    = link_to "ユーザー一覧へ", users_path ,class: 'btn btn-primary'
+    = link_to "いいねランキング", post_index_rank_path ,class: 'btn btn-primary'
     %h2 投稿する
     = form_for @post do |f|
       = f.text_field :content
@@ -18,9 +19,11 @@
 .main
   %h2 投稿一覧
   - @posts.each do |post|
-    %a{:href => "/users/#{post.user.id}"}= post.user.email
-    %a{:href => "/posts/#{post.id}"}= post.content
-    %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, size: "100x100", alt: "test"
-    (#{post.liked_users.count})
+    .contents
+      .div
+        %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, size: "200x200", alt: "test",class: 'image'
+      %a{:href => "/users/#{post.user.id}"}= post.user.email
+      %a{:href => "/posts/#{post.id}"}= post.content
+      (#{post.liked_users.count})
 
   

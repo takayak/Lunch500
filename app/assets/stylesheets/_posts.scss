@@ -1,9 +1,12 @@
+// index
+
 h1 {
-  font-size: 30px;
+  font-size: 20px;
 }
 body{
   background-color:#f9f9f9;
   color: rgb(26, 25, 25);
+  height: 100vh;
 }
 a:link, a:visited, a:hover, a:active {
   color: blue;
@@ -14,5 +17,45 @@ a:link, a:visited, a:hover, a:active {
   font-size: 10px;
   background-color: orange;
   padding: 6px;
+}
+.main{
+  .contents{
+    border: solid 1px gray;
+    // display: inline;
+    display: inline-block;
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+    .image{
+      border: solid 3px gray;
+      border-radius: 20px;
+    }
+  }
+}
 
+
+
+
+// show
+.iine{
+  .iine__content{
+    display: inline;
+  }
+}
+body{
+  text-align: center;
+}
+.content{
+  margin: 0 auto;
+  width: 600px;
+  border: solid 3px gray;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  .post__image{
+    border: solid 3px gray;
+    border-radius: 20px;
+  }
 }

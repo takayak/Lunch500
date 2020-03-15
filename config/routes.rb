@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show, :create] do
     resources :likes, only: [:create, :destroy]
   end
+  get 'post/index_rank', to: 'posts#index_rank'
 
   root 'posts#index'
 end
