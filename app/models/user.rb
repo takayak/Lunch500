@@ -8,7 +8,9 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :liked_posts, through: :likes, source: :post
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true
+  
+  mount_uploader :image, ImageUploader
 
 
   def already_liked?(post)

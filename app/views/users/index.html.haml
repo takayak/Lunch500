@@ -1,5 +1,15 @@
 %h1 ユーザー一覧
-- @users.each do |user|
-  %a{:href => "/users/#{user.id}"}= user.email
-  %hr/
-= link_to "ホームへ戻る", posts_path
+.container
+  - @users.each do |user|
+    %table.table.table-hover.table-bordered
+      .tr.row
+        .th.col-sm-2
+          %a{:href => "/users/#{user.id}"}= user.email
+        .th.col-sm-4
+          %a{:href => "/users/#{user.id}"}= user.name
+        .th.col-sm-4
+          %a{:href => "/users/#{user.id}"}
+            = image_tag user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
+
+    %hr/
+  = link_to "ホームへ戻る", posts_path

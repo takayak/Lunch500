@@ -1,12 +1,23 @@
-%h1 ユーザー詳細ページ
-%h3= @user.email
-%h2 投稿内容
-- @user.posts.each do |post|
-  %a{:href => "/posts/#{post.id}"}= post.content
+.container
+  -# %h1 ユーザー詳細ページ
+  .top_content
+    .top_content_left
+      %a{:href => "/users/#{@user.id}"}
+        = image_tag @user.image.to_s, size: "130x130", alt: "pic",class: 'image_user'
+    .top_content_right
+      %h4=@user.name
+    
+  %h4 投稿内容
+  - @user.posts.each do |post|
+    %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
   %hr/
-%h3 いいねしている投稿
-- @user.liked_posts.each do |post|
-  = post.user.email
-  = post.content
-= link_to "ユーザー一覧へ", users_path
-= link_to "ホームへ戻る", posts_path
+  %h4 いいねしている投稿
+  - @user.liked_posts.each do |post|
+    .inline-div
+      %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
+      .div
+        = post.user.name
+        = post.content
+  %hr
+  = link_to "ユーザー一覧へ", users_path
+  = link_to "ホームへ戻る", posts_path

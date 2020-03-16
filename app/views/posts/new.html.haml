@@ -1,0 +1,17 @@
+.container.field.image
+  = form_for @post do |f|
+    %form
+      .form-group
+        = f.label :内容
+        = f.text_area :content ,size:"30x10" ,class:'form-control'
+      .form-group
+        = f.label 'サムネイル（スクリーンショットなど）'
+        #img_field{:onclick => "$('#file').click()"}
+          - if @post.image.url.present?
+            = image_tag(@post.image.url)
+          - else
+            %i.fas.fa-image
+            %i.fas.fa-file-upload.add
+        = f.file_field :image ,class:'form-control image',style:"display:none;", id: "file"
+
+      = f.submit

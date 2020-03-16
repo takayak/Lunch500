@@ -2,10 +2,39 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    = Gon::Base.render_data
     %title Lunch500
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %header
+      - if user_signed_in?
+        .logo
+          = link_to posts_path do
+            = image_tag src="/assets/lunch500.png", size: "150x60"
+        = link_to destroy_user_session_path, :method => :delete ,class: 'btn btn-default btn-default-add' do
+          %i.fas.fa-sign-out-alt
+            ログアウト
+        = link_to "index-user", users_path ,class: 'btn btn-default btn-default-add'
+        = link_to post_index_rank_path ,class: 'btn btn-default btn-default-add'do
+          %i.fas.fa-crown
+            rank
+        = link_to user_path(current_user.id) ,class: '' do
+          = image_tag current_user.image.to_s, size: "50x50", alt: "test",class: 'mypage-image'
+        = link_to "編集", edit_user_registration_path(params[:id])
+        = link_to "投稿する", new_post_path(params[:id]),class: 'btn btn-default btn-default-add'
+        
+        -# %h2 投稿する
+        -# = form_for @post do |f|
+        -#   = f.text_field :content
+        -#   = f.file_field :image
+        -#   = f.submit
+      - else
+        .logo 
+          = image_tag src="/assets/lunch500.png", size: "150x60"
+        = link_to "ユーザー登録", new_user_registration_path
+        = link_to "ログイン", new_user_session_path
+    .under-header
+      = yield

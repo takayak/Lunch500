@@ -1,11 +1,15 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:show, :create]
   def index
-    @posts = Post.all
+    @posts = Post.all.order(created_at: :desc)
+    @post = Post.new
+  end
+  def new
     @post = Post.new
   end
   def index_rank
-    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(3).pluck(:post_id))
+    @all_ranks = Post.find(Like.group(:post_id).order('count(post_id) desc').limit(20).pluck(:post_id))
+
   end
 
   def show

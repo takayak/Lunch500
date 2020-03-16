@@ -5,18 +5,15 @@ h1 {
 }
 body{
   background-color:#f9f9f9;
-  color: rgb(26, 25, 25);
-  height: 100vh;
+  height: contain;
 }
 a:link, a:visited, a:hover, a:active {
-  color: blue;
+  color: black;
 }
 
 .logo{
   display: inline;
-  font-size: 10px;
-  background-color: orange;
-  padding: 6px;
+  color: white;
 }
 .main{
   .contents{
@@ -24,13 +21,43 @@ a:link, a:visited, a:hover, a:active {
     // display: inline;
     display: inline-block;
     width: 250px;
-    margin: 0 auto;
+    margin-right: 50px;
+    margin-bottom: 50px;
     border-radius: 10px;
     padding: 10px;
     background-color: white;
+    position: relative;
+    .content_head{
+      text-align: left;
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+    .image_user{
+      border: solid 1px gray;
+      border-radius: 50%;
+    }
     .image{
-      border: solid 3px gray;
-      border-radius: 20px;
+      order: solid 2px gray;
+      border-radius: 10px;
+    }
+    .image:hover{
+      box-shadow:1px 3px 3px 2px rgb(119, 118, 118);
+      transition-duration:0.5s;
+    }
+    .post-icon{
+      position: absolute;
+      color: red;
+      left: 180px;
+      top: 220px;
+    }
+    .post-good{
+      position: absolute;
+      color: white;
+      left: 192px;
+      top: 225px;
+      z-index: 10;
+      font-size: small;
+      font-weight: bold;
     }
   }
 }
@@ -39,6 +66,7 @@ a:link, a:visited, a:hover, a:active {
 
 
 // show
+
 .iine{
   .iine__content{
     display: inline;
@@ -54,8 +82,99 @@ body{
   border-radius: 20px;
   padding: 10px;
   background-color: white;
+  .content-head{
+    text-align: left;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    display:flex;
+    line-height: 60px;
+    .image_user{
+      border: solid 1px gray;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .iine__content{
+      margin-left: 170px;
+    }
+  }
   .post__image{
     border: solid 3px gray;
     border-radius: 20px;
   }
+  button {
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .image_user{
+    border: solid 1px gray;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}
+
+
+// rank
+.graf{
+  width: 500px;
+}
+.ranking{
+  width: 50vw;
+  margin: 0 auto;
+  margin-top: 50px;
+  .image{
+    border-radius: 5px;
+  }
+}
+
+// post new
+#img_field {
+  font-size: 15px;
+  margin-top: 10px;
+  padding: 5px 8px;
+  border: solid 1px #EDBC6C;
+  color: #666;
+  position: relative;
+  padding: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 400px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.3s ease-out;
+}
+ 
+#img_field i {
+  font-size: 100px;
+  color: #aaa;
+  line-height: 250px;
+  transition: 0.3s ease-out;
+}
+ 
+#img_field i.add {
+  display: none;
+  font-size: 50px;
+  position: absolute;
+  top: -90px;
+  right: 15px;
+}
+ 
+#img_field:hover {
+  background-color: #EDBC6C;
+  transition: 0.3s ease-out;
+  opacity: 0.9;
+}
+ 
+#img_field:hover i {
+  transition: 0.3s ease-out;
+  display: block;
+  color: #fff;
 }

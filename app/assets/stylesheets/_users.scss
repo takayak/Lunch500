@@ -1,3 +1,26 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container{
+  .top_content{
+    display: flex;
+    .top_content_left{
+      margin-left: 150px;
+    }
+    .top_content_right{
+      margin-left: 150px;
+    }
+  }
+  .image{
+    border-radius: 10px;
+  }
+  .image_user{
+    border-radius: 50%;
+    border: solid 2px gray;
+  }
+  .inline-div{
+    display: inline-block;
+    width: fit-content;
+  }
+}

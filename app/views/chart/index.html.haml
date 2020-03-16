@@ -1,0 +1,7 @@
+%h1 Chart#index
+%p Find me in app/views/chart/index.html.haml
+%canvas#myChart{:height => "70", :width => "200"}
+-# :javascript
+-#   var graphdays = #{@dayline}, graphtimes = #{@timeline}
+:javascript
+  draw_graph();

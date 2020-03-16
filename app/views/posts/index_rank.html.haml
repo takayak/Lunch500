@@ -1,2 +1,19 @@
-- @all_ranks.each.with_index(1) do |post,i|
-  第 #{i} 位 #{post.content}
+.graf-width
+  %canvas#myChart{:height => "8", :width => "50"}
+  :javascript
+    draw_graph();
+.ranking
+  %table.table.table-hover.table-bordered
+    - @all_ranks.each.with_index(1) do |post,i|
+      %tr.row
+        %th.col-sm-2
+          .div
+            No.#{i} 
+          .div
+            = image_tag post.user.image.to_s, size: "40x40", alt: "test",class: 'image'
+        %td.col-sm-4
+          #{post.content}
+        %td.col-sm-4
+          %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, size: "100x100", alt: "test",class: 'image'
+        %td.col-sm-2
+          #{post.likes.count}いいね

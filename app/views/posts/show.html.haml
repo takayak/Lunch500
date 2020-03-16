@@ -1,18 +1,26 @@
-%h1 投稿詳細ページ
-%h3= @post.user.email
+%h1 Detail
 .content
+  .content-head
+    %a{:href => "/users/#{@post.user.id}"}
+      = image_tag @post.user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
+    =@post.user.name
+    .iine__content
+      いいね件数: #{@post.likes.count}
+    - if current_user.already_liked?(@post)
+      = button_to post_like_path(@post), method: :delete do
+        %i.fas.fa-heart
+    - else
+      = button_to post_likes_path(@post) do
+        %i.far.fa-heart
+      -# = link_to 'iine',post_likes_path(@post)
   = image_tag @post.image.to_s, size: "400x400", alt: "test",class: 'post__image'
   %h3= @post.content
   .iine
-    %h3
-      いいね件数: #{@post.likes.count}
-      .iine__content
-      - if current_user.already_liked?(@post)
-        = button_to 'いいねを取り消す', post_like_path(@post), method: :delete
-      - else
-        = button_to 'いいね', post_likes_path(@post)
-        -# = link_to 'iine',post_likes_path(@post)
-  %h2 いいねしたユーザー
+    pushed good button this user
   - @post.liked_users.each do |user|
-    %li= user.email
-  = link_to "ホームへ戻る", posts_path
+    = image_tag user.image.to_s, size: "50x50", alt: "test",class: 'image_user'
+  .div
+    %iframe{:allowfullscreen => "", "aria-hidden" => "false", :frameborder => "0", :height => "300", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26371446.403446406!2d-113.71949276838316!3d36.21104560735424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2z44Ki44Oh44Oq44Kr5ZCI6KGG5Zu9!5e0!3m2!1sja!2sjp!4v1584399364429!5m2!1sja!2sjp", :style => "border:0;", :tabindex => "0", :width => "400"}
+  .div
+    = link_to "ここへ行く","https://www.google.com/maps/dir//%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%AB%E5%90%88%E8%A1%86%E5%9B%BD/@36.2110456,-113.7194928,4z/data=!4m17!1m7!3m6!1s0x54eab584e432360b:0x1c3bb99243deb742!2z44Ki44Oh44Oq44Kr5ZCI6KGG5Zu9!3b1!8m2!3d37.09024!4d-95.712891!4m8!1m0!1m5!1m1!1s0x54eab584e432360b:0x1c3bb99243deb742!2m2!1d-95.712891!2d37.09024!3e2",class:'btn btn-default btn-default-add'
+    = link_to "ホームへ戻る", posts_path,class:'btn btn-default btn-default-add'
