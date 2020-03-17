@@ -12,12 +12,15 @@
     %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
   %hr/
   %h4 いいねしている投稿
-  - @user.liked_posts.each do |post|
-    .inline-div
-      %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
-      .div
-        = post.user.name
-        = post.content
+  .inline-d
+    - @user.liked_posts.each do |post|
+      .inline-div
+        %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
+        .div
+          -# = post.user.name
+          %a{:href => "/users/#{post.user.id}"}
+            = image_tag post.user.image.to_s, size: "30x30", alt: "pic",class: 'image_user'
+          = post.content
   %hr
   = link_to "ユーザー一覧へ", users_path
   = link_to "ホームへ戻る", posts_path

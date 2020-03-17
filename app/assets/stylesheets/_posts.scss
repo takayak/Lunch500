@@ -13,7 +13,21 @@ a:link, a:visited, a:hover, a:active {
 
 .logo{
   display: inline;
-  color: white;
+  // color: white;
+}
+.hover4 {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
+  background-color: #4CAF50;
+  // color: #fff;
+  display: inline-block;
+  padding: 0.6em 2em;
+  margin: 0 0 2em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.hover4:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.1875em);
 }
 .main{
   .contents{

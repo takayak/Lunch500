@@ -19,8 +19,13 @@
     border-radius: 50%;
     border: solid 2px gray;
   }
-  .inline-div{
-    display: inline-block;
-    width: fit-content;
+  .inline-d{
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    .inline-div{
+      display: inline-block;
+      width: fit-content;
+    }
   }
 }

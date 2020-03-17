@@ -1,7 +1,7 @@
 
 .main
   - @posts.each do |post|
-    .contents
+    .contents.hover.hover4
       .content_head
         %a{:href => "/users/#{post.user.id}"}
           = image_tag post.user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
