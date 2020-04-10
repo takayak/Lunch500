@@ -18,6 +18,9 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require Chart.min
+//= require chartkick
+//= require Chart.bundle
+
 
 $(function(){
   $fileField = $('#file')

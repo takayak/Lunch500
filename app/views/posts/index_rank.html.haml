@@ -1,7 +1,10 @@
-.graf-width
-  %canvas#myChart{:height => "8", :width => "50"}
-  :javascript
-    draw_graph();
+-# .graf-width
+-#   %canvas#myChart{:height => "8", :width => "50"}
+-#   :javascript
+-#     draw_graph();
+-# - @all_ranks.each do |post|
+= column_chart [["#{@all_ranks[0].user.name}","#{@all_ranks[0].likes.count}"],["#{@all_ranks[1].user.name}","#{@all_ranks[1].likes.count}"],["#{@all_ranks[2].user.name}","#{@all_ranks[2].likes.count}"],["#{@all_ranks[3].user.name}","#{@all_ranks[3].likes.count}"],["#{@all_ranks[4].user.name}","#{@all_ranks[4].likes.count}"],["#{@all_ranks[5].user.name}","#{@all_ranks[5].likes.count}"]], id:'total-attendance-chart', width: '800px',height: '400px', colors: ['skyblue']
+-# = column_chart [["#{@all_ranks.user.name}","#{@all_ranks.likes.count}"]], id:'total-attendance-chart', width: '800px',height: '400px', colors: ['#b00']
 .ranking
   %table.table.table-hover.table-bordered
     - @all_ranks.each.with_index(1) do |post,i|

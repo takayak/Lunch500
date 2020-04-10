@@ -2,10 +2,7 @@
   = form_for @post do |f|
     %form
       .form-group
-        = f.label :内容
-        = f.text_area :content ,size:"30x10" ,class:'form-control'
-      .form-group
-        = f.label 'サムネイル（スクリーンショットなど）'
+        = f.label 'ランチの画像を選択してください'
         #img_field{:onclick => "$('#file').click()"}
           - if @post.image.url.present?
             = image_tag(@post.image.url)
@@ -14,4 +11,10 @@
             %i.fas.fa-file-upload.add
         = f.file_field :image ,class:'form-control image',style:"display:none;", id: "file"
 
+      .form-group
+        = f.label :内容
+        = f.text_area :content ,size:"30x10" ,class:'form-control'
+      .form-group
+        = f.label :住所
+        = f.text_field :address ,size:"5x5" ,class:'form-control'
       = f.submit
