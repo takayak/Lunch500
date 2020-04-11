@@ -1,1 +1,69 @@
-hello
+:css
+  header{
+    display:none;
+  }
+  .under-header{
+    display:none;
+  }
+
+.this-header
+  .nav
+    %ul
+      %li
+        =link_to 'TOP', '#',class:'anchor-link'
+      %li
+        =link_to 'AboutSite', '#aboutsite',class:'anchor-link'
+      %li
+        =link_to 'profile', '#profile',class:'anchor-link'
+      %li
+        =link_to 'Product', '#works',class:'anchor-link'
+      %li
+        =link_to '', '#',class:'anchor-link'
+.good
+.about-site#aboutsite
+  .inner
+    .contents
+      .contents__title
+        About this site
+      .contents__text
+        ここはWebエンジニアtakayaのポートフォリオサイトです。
+        %br
+        これまでに手がけた制作物、身につけたスキルをまとめています。
+        %br
+        あなたに、私のことをもっと深く知ってほしいと思って作りました。
+        %br
+        どうぞお茶でも飲みながらごゆるりとサイト内を散策してください。
+.profile#profile
+  .inner
+    .contents
+      .contents__title
+        About this site
+      .contents__parent
+        .contents__parent__img
+          =image_tag 'prof-img.jpeg', alt: 'Rails icon', class: 'img'
+        .contents__parent__text
+          ここはWebエンジニアtakayaのポートフォリオサイトです。
+          %br
+          これまでに手がけた制作物、身につけたスキルをまとめています。
+          %br
+          あなたに、私のことをもっと深く知ってほしいと思って作りました。
+          %br
+          どうぞお茶でも飲みながらごゆるりとサイト内を散策してください。
+      .contents__link
+        =link_to 'https://twitter.com/poteto_program' do
+          %i.fab.fa-twitter-square.fa-7x
+        =link_to 'https://github.com/takayak' do
+          %i.fab.fa-github-square.fa-7x
+.works#works
+  .inner
+    .contents
+      .contents__title
+        WORKS
+      .contents__product
+        =link_to 'https://twitter.com/poteto_program' do
+          =image_tag 'prof-img.jpeg', alt: 'Rails icon', class: 'img'
+        =link_to 'https://twitter.com/poteto_program' do
+          =image_tag 'prof-img.jpeg', alt: 'Rails icon', class: 'img'
+        =link_to 'https://twitter.com/poteto_program' do
+          =image_tag 'prof-img.jpeg', alt: 'Rails icon', class: 'img'
+        

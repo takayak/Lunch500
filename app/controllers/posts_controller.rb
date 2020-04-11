@@ -34,6 +34,10 @@ class PostsController < ApplicationController
   def top
     
   end  
+  def top2
+    
+  end  
+  
 
   private
   def post_params
