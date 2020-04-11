@@ -1,0 +1,21 @@
+%h2 gmap
+/ form_withはデフォルトでremote: trueの挙動になります
+= form_with url: map_request_path, method: :get do |f|
+  = f.text_field :address
+  = f.submit '地図表示'
+#map
+:css
+  #map{
+    height: 400px;
+  }
+:javascript
+  let mapInstance //この変数はmap.js.erbでも使うのでタイプミスに注意
+
+  function initMap(){
+    mapInstance = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 35.6588903, lng: 139.6975169},
+    zoom: 8
+    });
+  }
+= succeed "" do
+  %script{:src => "https://maps.googleapis.com/maps/api/js?key=API-KEY=initMap"}

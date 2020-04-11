@@ -13,11 +13,14 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
 //= require jquery3
+//= require_tree .
 //= require popper
 //= require bootstrap-sprockets
 //= require Chart.min
+//= require chartkick
+//= require Chart.bundle
+
 
 $(function(){
   $fileField = $('#file')

@@ -1,3 +1,13 @@
+html {
+  font-size: 62.5%; /*ベースを10pxにしています*/
+  }
+  body {
+    font-size: 1.0rem; /*10px*/
+  }
+  h1 {
+     font-size: 1.4rem; /*14px*/
+  }
+
 .mypage-image{
   border-radius: 50%;
   border: solid 2px gray;
@@ -16,6 +26,4 @@ header{
 }
 .under-header{
   padding-top: 100px;
-}
-.logo{
 }
