@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
 
 
-  root to: 'maps#index'
+  root to: 'posts#top'
   resources :maps, only: [:index]
 
   get '/map_request', to: 'maps#map', as: 'map_request'
