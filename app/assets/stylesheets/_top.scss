@@ -68,6 +68,11 @@
     .contents{
       &__title{
         font-size: 6rem;
+        margin-bottom: 3rem;
+      }
+      &__text{
+        font-size: 1.5rem;
+        line-height: 6rem;
       }
       &__parent{
         .img{
@@ -92,7 +97,6 @@
         display: flex;
         justify-content: center;
         margin-top: 5rem;
-        // background-color:red ;
         &__img{
           .img{
             border-radius: 50%;
@@ -102,9 +106,14 @@
           margin-left: 2rem;
           text-align: left;
           font-size: 1.5rem;
+          line-height: 4rem;
         }
       }
       &__link{
+        a{
+          text-decoration: none;
+        }
+        margin-top: 5rem;
         .fa-twitter-square{
           color: skyblue;
         }
