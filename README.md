@@ -23,7 +23,8 @@ https://financial-field.com/household/2019/12/19/entry-65253
 ## アプリ使用の流れ
 ○初めての土地でも500円で食べれるランチを探すアプリです  
 ○投稿一覧から気になるランチの画像をクリック  
-![スクリーンショット 2020-04-14 0 53 29](https://user-images.githubusercontent.com/55888331/79145207-3b195280-7dfb-11ea-865e-599892ef87d9.png)
+![スクリーンショット 2020-04-14 0 53 29](https://user-images.githubusercontent.com/55888331/79146304-276eeb80-7dfd-11ea-9ce4-6a1a374a34f8.png)
+
 ○ここへ行くボタンを押してお店へのナビを始める  
 ![output11](https://user-images.githubusercontent.com/55888331/79146071-c0513700-7dfc-11ea-8290-a046919ad8da.gif)
 
