@@ -1,7 +1,7 @@
 - if user_signed_in?
   .logo
     = link_to posts_path do
-      = image_tag src="images/lunch500.png", size: "150x60"
+      = image_tag src="/images/lunch500.png", size: "150x60"
   .search
     = form_with(url: search_posts_path, local: true, method: :get, class: "search-form") do |form|
       = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
