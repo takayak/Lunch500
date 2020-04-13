@@ -62,7 +62,7 @@
     padding-top:30rem;
     font-size: 20rem;
     color: whitesmoke;
-    animation: fadeIn 3s ease 0s 1 normal;
+    animation: fadeIn 2s ease 0s 1 normal;
     @keyframes fadeIn { /*「fadeIn」と名前をそろえる*/
     0% {opacity: 0} /*アニメーション開始時は完全に透過*/
     100% {opacity: 1} /*アニメーション終了時は透過しない*/
@@ -128,13 +128,18 @@
         .fa-twitter-square{
           color: skyblue;
         }
+        img{
+          margin-top: 0.4rem;
+          vertical-align: top;
+          border-radius: 1rem;
+        }
       }
     }
   }
 }
 
 .works{
-  height: 90vh;
+  height: 400vh;
   .inner{
     width: 70vw;
     margin: 0 auto;
@@ -143,7 +148,7 @@
       &__title{
         font-size: 6rem;
       }
-      &__product{
+      &__products{
         a{
           text-decoration: none;
         }
@@ -156,6 +161,27 @@
         .img:hover{
           cursor: pointer;
           transform: scale(1.1, 1.1);
+        }
+      }
+      &__product{
+        margin-top: 10rem;
+        .border{
+          border: solid 1px gray;
+          margin: 0;
+          border-collapse: collapse;
+        }
+        .title{
+          font-size: 5rem;
+        }
+        .text{
+          font-size: 1.5rem;
+          padding: 3rem;
+          width: 65rem;
+          margin: 0 auto;
+        }
+        .img{
+          border-radius: 1rem;
+          box-shadow: gray 0.3rem 0.3rem 0.3rem 0.3rem;
         }
       }
     }

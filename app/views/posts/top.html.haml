@@ -59,6 +59,8 @@
           %i.fab.fa-twitter-square.fa-7x
         =link_to 'https://github.com/takayak' do
           %i.fab.fa-github-square.fa-7x
+        =link_to 'https://qiita.com/takayak' do
+          =image_tag 'qiita.png', alt: 'icon', class: 'img',size:'61x61'
         %p
           👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆👆
         %p
@@ -68,11 +70,49 @@
     .contents
       .contents__title
         WORKS
-      .contents__product
+      .contents__products
         =link_to posts_path do
           =image_tag 'p-lunch500.png', alt: 'Rails icon', class: 'img',size:'220x220'
         =link_to 'http://52.196.14.28' do
           =image_tag 'frema-sample.png', alt: 'Rails icon', class: 'img',size:'220x220'
         =link_to 'https://twitter.com/poteto_program' do
           =image_tag 'comming-s.jpeg', alt: 'Rails icon', class: 'img',size:'220x220'
-        
+      .contents__product
+        %p.title
+          Lunch500
+        =image_tag 'p-lunch500.png', alt: 'Rails icon', class: 'img',size:'850x600'
+        %p.text
+          %p.text.border
+            アプリの説明
+            %br
+            500円以下のランチを共有するSNS系アプリケーション
+          %p.text.border
+            制作理由
+            %br
+            見知らぬ場所でも500円で気軽に美味しいランチを
+            %br
+            食べるお店を見つけることができるWEBサービス
+            %br
+            転職期間中に出費を抑えながらもスクール仲間とランチをしたかった。
+            %br
+            出費は抑えてもお腹いっぱい美味しいものが食べたい。
+            %br
+            高いランチはたくさん出てくるけど500円のランチの検索に大変でした。
+            %br
+            500円のランチ一覧を紹介するサービスがあったら欲しい。
+            %br
+            出来たら現在地の距離別でリスト表示されたら嬉しい。
+          %p.text.border
+            使用方法
+            %br
+            投稿には会員登録が必要です。
+            %br
+            一覧表示には500円で食べれるランチを投稿されています。
+            %br
+            気になる写真をクリックすると写真詳細ページに遷移します。
+            %br
+            ここへ行くボタンを押してその写真のランチが食べられる店舗に
+            %br
+            ナビしてもらって行くという流れになります。
+          %br
+          %br

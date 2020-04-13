@@ -1,24 +1,5 @@
-# README
+## Lunch500
+見知らぬ土地でも簡単に500円以下で美味しいランチのお店を見つけるアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 
+![p-lunch500](https://user-images.githubusercontent.com/55888331/79142205-1a023300-7df6-11ea-893b-fde7deeb2cc9.png)
