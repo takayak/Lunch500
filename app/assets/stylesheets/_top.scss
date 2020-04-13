@@ -57,6 +57,17 @@
   width: 100vw;
   height: 100vh;
   background-color: gray;
+  font-family: 'Indie Flower', cursive;
+  p{
+    padding-top:30rem;
+    font-size: 20rem;
+    color: whitesmoke;
+    animation: fadeIn 3s ease 0s 1 normal;
+    @keyframes fadeIn { /*「fadeIn」と名前をそろえる*/
+    0% {opacity: 0} /*アニメーション開始時は完全に透過*/
+    100% {opacity: 1} /*アニメーション終了時は透過しない*/
+  }
+  }
 }
 
 .about-site{
