@@ -79,7 +79,7 @@ gem "haml-rails", ">= 1.0", '<= 2.0.1'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'bootstrap', '~> 4.1.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'chart-js-rails', '~> 0.1.4'
 gem 'gon', '~> 6.2.0'
