@@ -25,7 +25,8 @@ https://financial-field.com/household/2019/12/19/entry-65253
 ○投稿一覧から気になるランチの画像をクリック  
 ![スクリーンショット 2020-04-14 0 53 29](https://user-images.githubusercontent.com/55888331/79145207-3b195280-7dfb-11ea-865e-599892ef87d9.png)
 ○ここへ行くボタンを押してお店へのナビを始める  
-![output11](https://user-images.githubusercontent.com/55888331/79145989-8ed86b80-7dfc-11ea-9ac5-b7e07102bb1b.gif)
+![output11](https://user-images.githubusercontent.com/55888331/79146071-c0513700-7dfc-11ea-8290-a046919ad8da.gif)
+
 
 ## 機能一覧
 投稿機能  
