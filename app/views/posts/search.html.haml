@@ -1,0 +1,16 @@
+.main
+  - @posts.each do |post|
+    .contents.hover.hover4
+      .content_head
+        %a{:href => "/users/#{post.user.id}"}
+          = image_tag post.user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
+        #{post.user.name}
+      .div
+        %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, size: "200x200", alt: "test",class: 'image'
+      -# %a{:href => "/users/#{post.user.id}"}= post.user.name
+      %a{:href => "/posts/#{post.id}"}= post.content
+      %p.post-good
+        #{post.liked_users.count}
+      %i.fas.fa-heart.fa-2x.post-icon
+
+  
