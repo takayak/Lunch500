@@ -87,3 +87,4 @@ gem 'geocoder'
 gem 'pry-rails'
 gem "chartkick"
 gem 'chartable'
+gem 'fog-aws'
