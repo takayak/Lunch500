@@ -124,6 +124,34 @@ body{
     border-radius: 50%;
     margin-right: 20px;
   }
+  .container{
+    #text-area{
+      width: 20rem;
+    }
+  }
+  .comments{
+    .flex-box{
+      display: flex;
+    }
+    &__user{
+
+      display: inline-block;
+      .image_user{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &__comment{
+      width:30rem;
+      height: 4rem;
+      text-align: left;
+      border: solid 1px gray;
+      border-radius: 0.3rem;
+      display: inline-block;
+      vertical-align: top;
+
+    }
+  }
 }
 
 

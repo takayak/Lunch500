@@ -16,7 +16,7 @@
   = image_tag @post.image.to_s, size: "400x400", alt: "test",class: 'post__image'
   %h3= @post.content
   .iine
-    pushed good button this user
+    いいねしたユーザー
   - @post.liked_users.each do |user|
     = image_tag user.image.to_s, size: "50x50", alt: "test",class: 'image_user'
   .div
@@ -30,8 +30,8 @@
   .container
   - if current_user
     = form_with(model: [@post, @comment], local: true) do |form|
-      = form.text_area :text, placeholder: "コメントする", rows: "2"
-      = form.submit "SEND"
+      = form.text_area :text, placeholder: "コメントする", rows: "3",cols:"40"
+      = form.submit "SEND",class: 'btn btn-primary top'
   - else
     %strong
       %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
@@ -40,8 +40,11 @@
   %h4 ＜コメント一覧＞
   - if @comments
     - @comments.each do |comment|
-        
-      .comment
-        = link_to comment.user.name,"/users/#{comment.user_id}"
-        = comment.text
+      .flex-box
+        .comments__user
+          %a{:href => "/users/#{@post.user.id}"}
+            = image_tag @post.user.image.to_s, size: "30x30", alt: "pic",class: 'image_user'
+          = link_to comment.user.name,"/users/#{comment.user_id}"
+        .comments__comment
+          = comment.text
   

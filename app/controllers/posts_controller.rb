@@ -16,6 +16,7 @@ class PostsController < ApplicationController
     @like = Like.new
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
+    # @comments = @post.comments.includes(:user).order(created_at: "DESC")
   end
 
   def create

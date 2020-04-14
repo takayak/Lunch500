@@ -4,21 +4,25 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+    #アカウント登録後のリダイレクト先
+  def after_sign_up_path_for(resource)
+    posts_path
+  end
+
+  #アカウント編集後のリダイレクト先
+  def after_update_path_for(resource)
+    posts_path
+  end
+
   # GET /resource/sign_up
   # def new
   #   super
   # end
 
   # POST /resource
-  def create
-    @user = User.new(sign_up_params)
-    unless @user.valid?
-      flash.now[:alert] = "必須項目を確認してください"
-      render :new and return
-    end
-    @user.save
-    redirect_to posts_path
-  end
+  # def create
+  #   super
+  # end
 
   # GET /resource/edit
   # def edit

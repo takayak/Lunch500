@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'maps/index'
-  get 'chart/index'
+  # get 'maps/index'
+  # get 'chart/index'
   # devise_for :users
   devise_for :users, controllers: {
     registrations: 'users/registrations',
+    sessions: 'users/sessions'
     }
-  
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :show, :create,:new] do
     resources :comments, only: :create
