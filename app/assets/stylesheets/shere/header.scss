@@ -1,0 +1,34 @@
+
+.logo{
+  display: inline;
+  .img{
+    color: white;
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+    color: white;
+  }
+}
+.search{
+  display: inline-block;
+}
+.mypage-image{
+  border-radius: 50%;
+  border: solid 2px gray;
+}
+.btn-default-add{
+  border: solid 1px;
+  margin-right: 5px;
+}
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: rgb(245, 245, 245);
+  border-bottom: solid 1px gray;
+  box-shadow: rgb(218, 218, 218);
+}
+.under-header{
+  padding-top: 100px;
+}

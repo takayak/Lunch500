@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'maps/index'
   get 'chart/index'
-  devise_for :users
+  # devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    }
   
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :show, :create,:new] do
