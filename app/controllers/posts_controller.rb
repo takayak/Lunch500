@@ -25,7 +25,6 @@ class PostsController < ApplicationController
     @post[:latitude] = @latlng[0]
     @post[:longitude] = @latlng[1]
     @post.user_id = current_user.id
-    binding.pry
     if @post.save
       redirect_to posts_path
     else
