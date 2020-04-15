@@ -16,7 +16,7 @@
   = link_to destroy_user_session_path, :method => :delete ,class: 'btn btn-default btn-default-add' do
     %i.fas.fa-sign-out-alt
       SignOut
-  = link_to destroy_user_session_path(current_user.id) ,class: '' do
+  = link_to user_path(current_user.id) ,class: '' do
     = image_tag current_user.image.to_s, size: "50x50", alt: "test",class: 'mypage-image'
 - else
   .logo 
