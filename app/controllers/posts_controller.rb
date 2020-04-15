@@ -16,7 +16,6 @@ class PostsController < ApplicationController
     @like = Like.new
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
-    # @comments = @post.comments.includes(:user).order(created_at: "DESC")
   end
 
   def create
@@ -26,6 +25,7 @@ class PostsController < ApplicationController
     @post[:latitude] = @latlng[0]
     @post[:longitude] = @latlng[1]
     @post.user_id = current_user.id
+    binding.pry
     if @post.save
       redirect_to posts_path
     else
