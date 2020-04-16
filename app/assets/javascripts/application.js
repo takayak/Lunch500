@@ -19,9 +19,7 @@
 //= require bootstrap-sprockets
 //= require Chart.min
 //= require chartkick
-//= require Chart.bundle
 
-$(document).on('turbolinks:load', function () {
 $(function(){
   $fileField = $('#file')
  
@@ -44,5 +42,4 @@ $(function(){
     })(file);
     reader.readAsDataURL(file);
   });
-});
 });
