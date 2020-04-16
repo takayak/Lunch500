@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
     }
   resources :users, only: [:index, :show]
-  resources :posts, only: [:index, :show, :create,:new] do
+  resources :posts, only: [:index, :show, :create,:new,:destroy] do
     resources :comments, only: :create
     collection do
       get :search
@@ -17,12 +17,7 @@ Rails.application.routes.draw do
     resources :likes, only: [:create, :destroy]
   end
   get 'post/index_rank', to: 'posts#index_rank'
-  # root 'posts#index'
-
-
-
   root to: 'posts#top'
   resources :maps, only: [:index]
-
   get '/map_request', to: 'maps#map', as: 'map_request'
 end
