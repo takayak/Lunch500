@@ -177,6 +177,7 @@ body{
 
 // post new
 #img_field {
+  display: inline-block;
   font-size: 15px;
   margin-top: 10px;
   padding: 5px 8px;
@@ -222,4 +223,9 @@ body{
   transition: 0.3s ease-out;
   display: block;
   color: #fff;
+}
+.form{
+  .form-group{
+    
+  }
 }
