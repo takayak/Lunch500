@@ -38,9 +38,16 @@ a:link, a:visited, a:hover, a:active {
     background-color: white;
     position: relative;
     .content_head{
+      display: flex;
       text-align: left;
       margin-left: 20px;
       margin-bottom: 10px;
+      justify-content: space-between;
+      .user-group{
+
+      }
+      .good-group{
+      }
     }
     .image_user{
       border: solid 1px gray;
@@ -55,19 +62,19 @@ a:link, a:visited, a:hover, a:active {
       transition-duration:0.5s;
     }
     .post-icon{
-      position: absolute;
+      // position: absolute;
       color: red;
-      left: 180px;
-      top: 220px;
+      // left: 180px;
+      // top: 220px;
     }
     .post-good{
-      position: absolute;
-      color: white;
-      left: 192px;
-      top: 225px;
-      z-index: 10;
-      font-size: small;
-      font-weight: bold;
+      // position: absolute;
+      // color: white;
+      // left: 192px;
+      // top: 225px;
+      // z-index: 10;
+      // font-size: small;
+      // font-weight: bold;
     }
   }
 }
