@@ -37,10 +37,13 @@ class PostsController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
-  def top
-    
-  end  
 
+  def top
+  end
+
+  def practicejs
+    
+  end
   def search
     @posts = Post.search(params[:keyword])
   end

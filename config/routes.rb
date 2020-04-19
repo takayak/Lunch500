@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     collection do
       get :search
       get :top
-      get :top2
+      get :practicejs
     end
     resources :likes, only: [:create, :destroy]
   end

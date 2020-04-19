@@ -1,0 +1,15 @@
+%p Jqueryの練習
+%button もっと読む
+.result show
+%input{type:'text',name:'name',id:'name'}
+%input{type:'submit',id:'greet',value:'Greet!'}
+:javascript
+  $(function(){
+    $('#greet').click(function(){
+      $.get('greet.php',{
+        name: $('name').val();
+      },function{
+        $('#result')
+      })
+    });
+  });
