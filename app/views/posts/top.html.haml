@@ -27,7 +27,7 @@
       .contents__title
         About this site
       .contents__text
-        こちらはWebエンジニアtakayaのポートフォリオサイトです。
+        こちらはWebエンジニア希望のtakayaのポートフォリオサイトです。
         %br
         これまでに手がけた制作物、身につけたスキルをまとめています。
         %br
@@ -84,11 +84,15 @@
             =image_tag 'frema-sample.png', alt: 'Rails icon', class: 'img'
           .contents__products__2__tbox
             %p.title チームスクラム開発:フリマ
-            .readme.btn.btn-default
-              Read me
-              %i.fab.fa-readme
+            %p ユーザー名： admin
+            %p パスワード： aaaa
+            =link_to 'https://github.com/takayak/freemarket_sample_71a/blob/master/README.md' do
+              .readme.btn.btn-default
+                Read me
+                %i.fab.fa-readme
         .contents__products__3
           =link_to 'https://twitter.com/poteto_program' do
             =image_tag 'comming-s.jpeg', alt: 'Rails icon', class: 'img'
           .contents__products__3__tbox
-      
+.footer
+  takaya's site

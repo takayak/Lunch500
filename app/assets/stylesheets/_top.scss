@@ -62,7 +62,7 @@
     padding-top:30rem;
     font-size: 20rem;
     color: whitesmoke;
-    animation: fadeIn 2s ease 0s 1 normal;
+    animation: fadeIn 1.5s ease 0s 1 normal;
     @keyframes fadeIn { /*「fadeIn」と名前をそろえる*/
     0% {opacity: 0} /*アニメーション開始時は完全に透過*/
     100% {opacity: 1} /*アニメーション終了時は透過しない*/
@@ -152,7 +152,7 @@
 }
 
 .works{
-  height: 400vh;
+  height: 100vh;
   .inner{
     width: 70vw;
     margin: 0 auto;
@@ -219,4 +219,11 @@
       }
     }
   }
+}
+.footer{
+  background-color: black;
+  opacity: 0.5; 
+  height: 3rem;
+  color: white;
+  vertical-align: middle;
 }
