@@ -114,26 +114,39 @@
           }
         }
         &__text{
+          // border: solid 1px gray;
+          border-radius: 10px;
+          padding: 24px;
+          width: 470px;
+          height: 350px;
           margin-left: 2rem;
           text-align: left;
-          font-size: 1.5rem;
-          line-height: 4rem;
+          font-size: 1.4rem;
+          line-height: 18px;
+          color: rgb(29, 29, 29);
+          background-color: rgb(235, 235, 235);
+          p{
+            margin: 0;
+            color: rgb(29, 29, 29);
+          }
+          .contents__link{
+            text-align: center;
+            a{
+              text-decoration: none;
+            }
+            margin-top: 5rem;
+            .fa-twitter-square{
+              color: skyblue;
+            }
+            img{
+              margin-top: 0.4rem;
+              vertical-align: top;
+              border-radius: 1rem;
+            }
+          }
         }
       }
-      &__link{
-        a{
-          text-decoration: none;
-        }
-        margin-top: 5rem;
-        .fa-twitter-square{
-          color: skyblue;
-        }
-        img{
-          margin-top: 0.4rem;
-          vertical-align: top;
-          border-radius: 1rem;
-        }
-      }
+      
     }
   }
 }
@@ -154,7 +167,36 @@
         .title{
           font-size: 1.6rem;
         }
+        .readme{
+          border: solid 1px black;
+          border-radius: 0.2rem;
+          width: 70%;
+          margin: 0 auto;
+          margin-bottom: 2rem;
+        }
+        .readme:hover{
+          background-color: rgb(173, 173, 173);
+        }
         &__1{
+          border: solid 1px gray;
+          margin-right: 1rem;
+          border-radius: 1rem;
+          &__tbox{
+            
+          }
+        }
+        &__2{
+          border: solid 1px gray;
+          margin-right: 1rem;
+          border-radius: 1rem;
+          &__tbox{
+            
+          }
+        }
+        &__3{
+          border: solid 1px gray;
+          margin-right: 1rem;
+          border-radius: 1rem;
           &__tbox{
             
           }

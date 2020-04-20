@@ -8,15 +8,15 @@ body{
   height: contain;
 }
 a:link, a:visited, a:hover, a:active {
-  color: black;
+  color: rgb(114, 114, 114);
+  text-decoration: none;
 }
 
 .hover4 {
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
   background-color: #4CAF50;
-  // color: #fff;
   display: inline-block;
-  padding: 0.6em 2em;
+  // padding: 0.6em 2em;
   margin: 0 0 2em;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -28,21 +28,23 @@ a:link, a:visited, a:hover, a:active {
 .main{
   .contents{
     border: solid 1px gray;
-    // display: inline;
     display: inline-block;
     width: 250px;
     margin-right: 50px;
     margin-bottom: 50px;
     border-radius: 10px;
-    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     background-color: white;
     position: relative;
     .content_head{
       display: flex;
       text-align: left;
       margin-left: 20px;
+      margin-right: 10px;
       margin-bottom: 10px;
       justify-content: space-between;
+      
       .user-group{
 
       }
@@ -54,27 +56,20 @@ a:link, a:visited, a:hover, a:active {
       border-radius: 50%;
     }
     .image{
-      order: solid 2px gray;
-      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      border-radius: 2px;
     }
     .image:hover{
       box-shadow:1px 3px 3px 2px rgb(119, 118, 118);
       transition-duration:0.5s;
     }
     .post-icon{
-      // position: absolute;
       color: red;
-      // left: 180px;
-      // top: 220px;
     }
-    .post-good{
-      // position: absolute;
-      // color: white;
-      // left: 192px;
-      // top: 225px;
-      // z-index: 10;
-      // font-size: small;
-      // font-weight: bold;
+    
+    .post-title{
+      padding-top: 1rem;
     }
   }
 }
@@ -112,6 +107,9 @@ body{
     }
     .iine__content{
       margin-left: 170px;
+    }
+    // テーブル
+    .col-md-8{
     }
   }
   .post__image{
@@ -158,6 +156,9 @@ body{
       vertical-align: top;
 
     }
+  }
+  .text-content{
+    margin-top:3rem ;
   }
 }
 

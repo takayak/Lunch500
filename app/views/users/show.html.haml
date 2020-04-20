@@ -19,12 +19,8 @@
         %a{:href => "/users/#{post.user.id}"}
           = image_tag post.user.image.to_s, size: "30x30", alt: "pic",class: 'image_user'
         = post.content
-        -# %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
         .div
           %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s , size: "150x150", alt: "test",class: 'image'
-          -# %a{:href => "/users/#{post.user.id}"}
-          -#   = image_tag post.user.image.to_s, size: "30x30", alt: "pic",class: 'image_user'
-          -# = post.content
   %hr
   = link_to "ユーザー一覧へ", users_path
   = link_to "ホームへ戻る", posts_path

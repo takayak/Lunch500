@@ -14,7 +14,24 @@
         %i.far.fa-heart
       -# = link_to 'iine',post_likes_path(@post)
   = image_tag @post.image.to_s, size: "400x400", alt: "test",class: 'post__image'
-  %h3= @post.content
+  .text-content
+    .col-md-9{style:'margin:0 auto;'}
+      %table.table.table-bordered
+        %tr
+          %td
+            タイトル
+          %th
+            = @post.title
+        %tr
+          %td
+            内容
+          %th
+            = @post.content
+        %tr
+          %td
+            キーワード
+          %th
+            = @post.address
   .iine
     いいねしたユーザー
   - @post.liked_users.each do |user|
