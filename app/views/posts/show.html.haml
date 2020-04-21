@@ -41,7 +41,8 @@
   .div
     = link_to "ここへ行く","https://www.google.com/maps/dir/現在地/#{@post.latitude},#{@post.longitude}",class:'btn btn-default btn-default-add'
     = link_to "ホームへ戻る", posts_path,class:'btn btn-default btn-default-add'
-    = link_to "削除する",post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }
+    - if current_user.id == @post.user_id
+      = link_to "削除する",post_path(@post), method: :delete, class:'btn btn-warning',data: { confirm: 'Are you sure?' }
     
 %br
 .content
