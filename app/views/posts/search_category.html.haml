@@ -1,16 +1,30 @@
+
 .main
   - @posts.each do |post|
     .contents.hover.hover4
       .content_head
-        %a{:href => "/users/#{post.user.id}"}
-          = image_tag post.user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
-        #{post.user.name}
-      .div
-        %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, size: "200x200", alt: "test",class: 'image'
-      -# %a{:href => "/users/#{post.user.id}"}= post.user.name
-      %a{:href => "/posts/#{post.id}"}= post.content
-      %p.post-good
-        #{post.liked_users.count}
-      %i.fas.fa-heart.fa-2x.post-icon
+        .user-group
+          %a{:href => "/users/#{post.user.id}"}
+            = image_tag post.user.image.to_s, size: "50x50", alt: "pic",class: 'image_user'
+          #{post.user.name}
+        .good-group
+        - if user_signed_in?	
+          %p
+            - if current_user.already_liked?(post)
+              = link_to post_like_path(post,current_user.id), method: :delete do
+                %i.fas.fa-heart.fa-2x.post-icon
+            - else
+              = link_to post_likes_path(post),class:'' ,method:post do
+                %i.fas.fa-heart.fa-2x
+            #{post.liked_users.count}
+        - else
+          %p
+            %i.far.fa-heart.fa-2x
+            #{post.liked_users.count}
 
-  
+      .div
+        %a{:href => "/posts/#{post.id}"}= image_tag post.image.to_s, alt: "test",class: 'image'
+      -# %a{:href => "/posts/#{post.id}"}
+      .post-title
+        = post.title
+      
