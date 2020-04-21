@@ -44,13 +44,20 @@ class PostsController < ApplicationController
   def practicejs
     
   end
+
   def search
     @posts = Post.search(params[:keyword])
   end
+
+  def search_category
+    @posts = Post.where(category_id: params[:id])
+    
+  end
+
   
 
   private
   def post_params
-    params.require(:post).permit(:content,:image,:address,:latitude,:longitude,:title)
+    params.require(:post).permit(:content,:image,:address,:latitude,:longitude,:title,:category_id)
   end
 end

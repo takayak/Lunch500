@@ -14,6 +14,10 @@ Rails.application.routes.draw do
       get :top
       get :practicejs
     end
+    member do
+      post :search_category
+    end
+
     resources :likes, only: [:create, :destroy]
   end
   get 'post/index_rank', to: 'posts#index_rank'

@@ -88,3 +88,4 @@ gem 'pry-rails'
 gem "chartkick"
 gem 'chartable'
 gem 'fog-aws'
+gem 'active_hash'

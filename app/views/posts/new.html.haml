@@ -16,6 +16,10 @@
         = f.label :タイトル
         = f.text_field :title ,class:'form-control'
       .form-group.col-md-5.mx-auto
+        -# = f.fields_for :category do |d|
+        = f.label :カテゴリ
+        = f.collection_select :category_id ,Category.all, :id, :name , class:'form-control'
+      .form-group.col-md-5.mx-auto
         = f.label :内容
         = f.text_area :content ,class:'form-control'
       .form-group.col-md-5.mx-auto
