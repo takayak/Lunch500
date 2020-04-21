@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get :practicejs
     end
     member do
-      post :search_category
+      get :search_category
     end
 
     resources :likes, only: [:create, :destroy]
