@@ -12,6 +12,19 @@
 }
 .search{
   display: inline-block;
+  #keyword{
+    width:20rem;
+    height: 3rem;
+    border-radius: 5px;
+  }
+  .search-btn{
+    height: 3rem;
+    width: 5rem;
+    border-radius: 1rem;
+  }
+  .search-btn:hover{
+    background-color: rgb(202, 202, 202);
+  }
 }
 .mypage-image{
   border-radius: 50%;
