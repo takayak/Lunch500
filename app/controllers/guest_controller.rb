@@ -1,7 +1,7 @@
 class GuestController < ApplicationController
 
   def create
-    @user = User.find_by(email: 'test@test')
+    @user = User.find_by(email: 'guest@guest')
     if @user == nil
       flash[:notice] = 'ゲスト購入ユーザーが作成されていません。'
       redirect_to posts_path
