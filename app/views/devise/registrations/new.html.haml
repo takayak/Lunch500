@@ -1,4 +1,6 @@
 %h2 Sign up
+= link_to "ゲストユーザーログイン",guest_path, method: :post,class: 'btn btn-primary' ,style:'color:white'
+
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "devise/shared/error_messages", resource: resource
   
