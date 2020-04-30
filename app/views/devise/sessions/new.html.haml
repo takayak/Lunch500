@@ -1,4 +1,5 @@
-%h2 Log in
+%h2 ログイン画面
+= link_to "ゲストユーザーログイン",guest_path, method: :post,class: 'btn btn-primary' ,style:'color:white'
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
     = f.label :email
