@@ -20,11 +20,6 @@ ActiveRecord::Schema.define(version: 2020_04_20_235340) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "geocodes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "post_id"
     t.bigint "user_id"
