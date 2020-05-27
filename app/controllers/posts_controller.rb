@@ -55,7 +55,6 @@ class PostsController < ApplicationController
 
   def search_category
     @posts = Post.where(category_id: params[:id])
-    
   end
 
   
