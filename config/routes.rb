@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #   registrations: 'users/registrations',
   #   sessions: 'users/sessions'
   # }
-  resources :users, only: [:index, :show]
+  # resources :users, only: [:index, :show]
   post '/guest', to: 'guest#create'
   post '/guest2', to: 'guest#create2'
   resources :posts, only: [:index, :show, :create,:new,:destroy] do
