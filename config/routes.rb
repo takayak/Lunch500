@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  # get 'maps/index'
-  # get 'chart/index'
   devise_for :users
   # devise_for :users, controllers: {
   #   registrations: 'users/registrations',
