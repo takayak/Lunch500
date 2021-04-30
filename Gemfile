@@ -82,7 +82,7 @@ gem 'mini_magick'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'chart-js-rails', '~> 0.1.4'
-gem 'gon', '~> 6.2.0'
+gem 'gon', '~> 6.4.0'
 gem 'geocoder'
 gem 'pry-rails'
 gem "chartkick"
